@@ -1,0 +1,16 @@
+{
+  "dependencies": {
+    "storage1": {
+      "resourceId": "/subscriptions/[parameters('subscriptionId')]/resourceGroups/[parameters('resourceGroupName')]/providers/Microsoft.Storage/storageAccounts/nizshime",
+      "type": "storage.azure",
+      "connectionId": "StorageAccount",
+      "secretStore": "AzureAppSettings"
+    },
+    "mssql2": {
+      "resourceId": "/subscriptions/[parameters('subscriptionId')]/resourceGroups/[parameters('resourceGroupName')]/providers/Microsoft.Sql/servers/nizshime-sqlserver/databases/AssesmentAzureMVC_db",
+      "type": "mssql.azure",
+      "connectionId": "AzureContext",
+      "secretStore": "AzureAppSettings"
+    }
+  }
+}

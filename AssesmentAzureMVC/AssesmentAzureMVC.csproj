@@ -2,6 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
+    <UserSecretsId>257f0f21-9510-42ba-a3af-dae7e9cd6885</UserSecretsId>
   </PropertyGroup>
 
   <ItemGroup>
@@ -22,5 +23,7 @@
   <ItemGroup>
     <Folder Include="Data\" />
   </ItemGroup>
+
+  <ProjectExtensions><VisualStudio><UserProperties appsettings_1json__JsonSchema="https://carafe.fm/schema/draft-02/bundle.schema.json" /></VisualStudio></ProjectExtensions>
 
 </Project>
