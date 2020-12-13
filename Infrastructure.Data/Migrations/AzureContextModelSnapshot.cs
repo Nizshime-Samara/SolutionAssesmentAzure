@@ -8,8 +8,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace Infrastructure.Data.Migrations
 {
-    [DbContext(typeof(AzureJogoContext))]
-    partial class AzureJogoContextModelSnapshot : ModelSnapshot
+    [DbContext(typeof(AzureContext))]
+    partial class AzureContextModelSnapshot : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)
         {
@@ -35,7 +35,7 @@ namespace Infrastructure.Data.Migrations
                     b.Property<string>("Nome")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<bool>("Parente")
+                    b.Property<bool>("Online")
                         .HasColumnType("bit");
 
                     b.HasKey("Id");

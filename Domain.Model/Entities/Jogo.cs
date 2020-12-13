@@ -14,10 +14,13 @@ namespace Domain.Model.Entities
 
         public string Nome { get; set; }
 
+        [DisplayName("Data Lançamento")]
         [DataType(DataType.Date)]
         public DateTime DataNascimento { get; set; }
 
-        public bool Parente { get; set; }
+
+        [DisplayName("Online?")]
+        public bool Online { get; set; }
 
         [DisplayName("Foto")]
         public string ImageUri { get; set; }

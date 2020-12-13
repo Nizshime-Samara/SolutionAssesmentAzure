@@ -29,8 +29,8 @@ namespace AssesmentAzureMVC
         {
             services.AddControllersWithViews();
 
-            //services.AddDbContext<AzureJogoContext>(options =>
-            //  options.UseSqlServer(Configuration.GetConnectionString("AzureJogoContext")));
+            //services.AddDbContext<AzureContext>(options =>
+            //  options.UseSqlServer(Configuration.GetConnectionString("AzureContext")));
 
             services.AddScoped<IBlobService, BlobService>(provider =>
            new BlobService(Configuration.GetValue<string>("StorageAccount")));

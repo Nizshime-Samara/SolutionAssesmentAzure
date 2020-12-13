@@ -22,23 +22,12 @@
                 <input asp-for="DataNascimento" class="form-control" />
                 <span asp-validation-for="DataNascimento" class="text-danger"></span>
             </div>
-            <div class="form-group form-check">
-                <label class="form-check-label">
-                    <input class="form-check-input" asp-for="Parente" /> @Html.DisplayNameFor(model => model.Parente)
-                </label>
-            </div>
+           
             <div class="form-group form-check">
                 <label asp-for="ImageUri" class="control-label"></label>
                 <input type="file" name="ImageFile" class="form-control" required accept=".jpg" />
             </div>
-            <div class="form-group form-check">
-                <label asp-for="ImageUri" class="control-label"></label>
-                <input type="file" name="ImageFile" class="form-control" required accept=".jpg" />
-            </div>
-            <div class="form-group form-check">
-                <label asp-for="ImageUri" class="control-label"></label>
-                <input type="file" name="ImageFile" class="form-control" required accept=".jpg" />
-            </div>
+            
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary" />
             </div>

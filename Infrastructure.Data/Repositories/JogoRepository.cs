@@ -12,9 +12,9 @@ namespace Infrastructure.Data.Repositories
 {
     public class JogoRepository : IJogoRepository
     {
-        private readonly AzureJogoContext _context;
+        private readonly AzureContext _context;
 
-        public JogoRepository(AzureJogoContext context)
+        public JogoRepository(AzureContext context)
         {
             _context = context;
         }

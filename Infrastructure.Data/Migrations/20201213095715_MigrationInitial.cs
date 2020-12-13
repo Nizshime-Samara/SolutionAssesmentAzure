@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace Infrastructure.Data.Migrations
 {
-    public partial class InitialMigration : Migration
+    public partial class MigrationInitial : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -15,7 +15,7 @@ namespace Infrastructure.Data.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Nome = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     DataNascimento = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    Parente = table.Column<bool>(type: "bit", nullable: false),
+                    Online = table.Column<bool>(type: "bit", nullable: false),
                     ImageUri = table.Column<string>(type: "nvarchar(max)", nullable: true)
                 },
                 constraints: table =>

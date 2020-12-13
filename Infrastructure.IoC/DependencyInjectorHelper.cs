@@ -20,15 +20,12 @@ namespace Infrastructure.IoC
     {
         public static void Register(IServiceCollection services, IConfiguration configuration)
         {
-            services.AddDbContext<AzureJogoContext>(options =>
-                    options.UseSqlServer(configuration.GetConnectionString("AzureJogoContext")));
+            services.AddDbContext<AzureContext>(options =>
+                    options.UseSqlServer(configuration.GetConnectionString("AzureContext")));
 
             services.AddScoped<IJogoRepository, JogoRepository>();
 
             services.AddScoped<IJogoService, JogoService>();
-
-            
-
         }
 
 

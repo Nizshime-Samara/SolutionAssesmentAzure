@@ -9,9 +9,9 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace Infrastructure.Data.Migrations
 {
-    [DbContext(typeof(AzureJogoContext))]
-    [Migration("20201212174712_InitialMigration")]
-    partial class InitialMigration
+    [DbContext(typeof(AzureContext))]
+    [Migration("20201213095715_MigrationInitial")]
+    partial class MigrationInitial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -37,7 +37,7 @@ namespace Infrastructure.Data.Migrations
                     b.Property<string>("Nome")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<bool>("Parente")
+                    b.Property<bool>("Online")
                         .HasColumnType("bit");
 
                     b.HasKey("Id");

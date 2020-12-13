@@ -8,9 +8,9 @@ using System.Threading.Tasks;
 
 namespace Infrastructure.Data.Context
 {
-    public class AzureJogoContext : DbContext
+    public class AzureContext : DbContext
     {
-        public AzureJogoContext(DbContextOptions<AzureJogoContext> options)
+        public AzureContext(DbContextOptions<AzureContext> options)
             : base(options)
         {
         }
