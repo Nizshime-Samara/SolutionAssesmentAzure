@@ -9,19 +9,21 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2 - Domain", "2 - Domain", 
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3 - Infrastructure", "3 - Infrastructure", "{DC1A5D15-FF6B-47CA-A7D2-997FE51682A0}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "NewFolder3", "NewFolder3", "{AE8A3987-4A23-4B7D-B315-735DBC826911}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Functions", "Functions", "{AE8A3987-4A23-4B7D-B315-735DBC826911}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure.IoC", "Infrastructure.IoC\Infrastructure.IoC.csproj", "{C0554E28-BD7E-4925-B7CD-99E127FC9B61}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Infrastructure.IoC", "Infrastructure.IoC\Infrastructure.IoC.csproj", "{C0554E28-BD7E-4925-B7CD-99E127FC9B61}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure.Data", "Infrastructure.Data\Infrastructure.Data.csproj", "{89EA6C35-7A81-4D63-9071-7103EE860585}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Infrastructure.Data", "Infrastructure.Data\Infrastructure.Data.csproj", "{89EA6C35-7A81-4D63-9071-7103EE860585}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure.Services", "Infrastructure.Services\Infrastructure.Services.csproj", "{48B74183-235F-4A7B-A86E-73C3B76C5F67}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Infrastructure.Services", "Infrastructure.Services\Infrastructure.Services.csproj", "{48B74183-235F-4A7B-A86E-73C3B76C5F67}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain.Services", "Domain.Services\Domain.Services.csproj", "{839E3D92-C23B-4075-B044-B4127797956A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Domain.Services", "Domain.Services\Domain.Services.csproj", "{839E3D92-C23B-4075-B044-B4127797956A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain.Model", "Domain.Model\Domain.Model.csproj", "{42A1A068-76C2-45F1-AD5B-FAB53F35BB55}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Domain.Model", "Domain.Model\Domain.Model.csproj", "{42A1A068-76C2-45F1-AD5B-FAB53F35BB55}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AssesmentAzureMVC", "AssesmentAzureMVC\AssesmentAzureMVC.csproj", "{77BB1F52-9FA4-4164-999E-683AA8036A14}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AssesmentAzureMVC", "AssesmentAzureMVC\AssesmentAzureMVC.csproj", "{77BB1F52-9FA4-4164-999E-683AA8036A14}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FunctionAppVisualiza", "FunctionAppVisualiza\FunctionAppVisualiza.csproj", "{B8A696DC-2D58-41D2-9FB2-6AF8C74FA2DE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -53,6 +55,10 @@ Global
 		{77BB1F52-9FA4-4164-999E-683AA8036A14}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{77BB1F52-9FA4-4164-999E-683AA8036A14}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{77BB1F52-9FA4-4164-999E-683AA8036A14}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B8A696DC-2D58-41D2-9FB2-6AF8C74FA2DE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B8A696DC-2D58-41D2-9FB2-6AF8C74FA2DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B8A696DC-2D58-41D2-9FB2-6AF8C74FA2DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B8A696DC-2D58-41D2-9FB2-6AF8C74FA2DE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -64,6 +70,7 @@ Global
 		{839E3D92-C23B-4075-B044-B4127797956A} = {8CDB6372-E112-40F4-BA0E-C41D3583B6A2}
 		{42A1A068-76C2-45F1-AD5B-FAB53F35BB55} = {8CDB6372-E112-40F4-BA0E-C41D3583B6A2}
 		{77BB1F52-9FA4-4164-999E-683AA8036A14} = {E9346FFE-DEE9-4ECB-9BFF-4D6CFF76F746}
+		{B8A696DC-2D58-41D2-9FB2-6AF8C74FA2DE} = {AE8A3987-4A23-4B7D-B315-735DBC826911}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {226BEB07-5E08-4822-A129-6B9FECA61CE3}

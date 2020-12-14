@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Infrastructure.Data.Migrations
 {
     [DbContext(typeof(AzureContext))]
-    [Migration("20201213095715_MigrationInitial")]
-    partial class MigrationInitial
+    [Migration("20201213234549_MigrationAtualizacaoDesfeita")]
+    partial class MigrationAtualizacaoDesfeita
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -28,7 +28,7 @@ namespace Infrastructure.Data.Migrations
                         .HasColumnType("int")
                         .UseIdentityColumn();
 
-                    b.Property<DateTime>("UltimaVisualizacao")
+                    b.Property<DateTime?>("DataNascimento")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("ImageUri")

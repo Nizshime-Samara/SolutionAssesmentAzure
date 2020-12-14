@@ -5,6 +5,7 @@ using Domain.Services.Services;
 using Infrastructure.Data.Context;
 using Infrastructure.Data.Repositories;
 using Infrastructure.Services.Blob;
+using Infrastructure.Services.Queue;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -26,8 +27,11 @@ namespace Infrastructure.IoC
             services.AddScoped<IJogoRepository, JogoRepository>();
 
             services.AddScoped<IJogoService, JogoService>();
+
+            services.AddScoped<IQueueService, QueueService>(provider =>
+                    new QueueService(configuration.GetValue<string>("StorageAccount")));
         }
 
-
+        //quando usar o getValue instalar a extensão Microsoft.Extensions.Configuration.Binder
     }
 }

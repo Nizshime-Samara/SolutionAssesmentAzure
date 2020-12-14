@@ -9,6 +9,10 @@ using Domain.Model.Entities;
 using Infrastructure.Data.Context;
 using Domain.Model.Interfaces.Services;
 using Microsoft.AspNetCore.Http;
+using Newtonsoft.Json;
+using System.Net.Http;
+using System.Text;
+using Microsoft.Extensions.Configuration;
 
 namespace AssesmentAzureMVC.Controllers
 {
@@ -35,7 +39,7 @@ namespace AssesmentAzureMVC.Controllers
                 return NotFound();
             }
 
-            var jogo = await _jogoService.GetByIdAsync(id.Value);
+             var jogo = await _jogoService.GetByIdAsync(id.Value);
             if (jogo == null)
             {
                 return NotFound();

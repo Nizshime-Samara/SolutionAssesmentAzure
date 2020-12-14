@@ -14,15 +14,14 @@ namespace Domain.Model.Entities
 
         public string Nome { get; set; }
 
-        [DisplayName("Data Lançamento")]
-        [DataType(DataType.Date)]
-        public DateTime DataNascimento { get; set; }
-
+        [DisplayName("Ultima Visualização")] 
+        public DateTime DataNascimento { get; set; } //trocar nome da entidade e depois subir as mudanças para as dependencias do Az e a App Service//
 
         [DisplayName("Online?")]
         public bool Online { get; set; }
 
         [DisplayName("Foto")]
         public string ImageUri { get; set; }
+        
     }
 }

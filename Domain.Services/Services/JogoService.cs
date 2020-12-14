@@ -2,8 +2,12 @@
 using Domain.Model.Interfaces.Infrastructure;
 using Domain.Model.Interfaces.Repositores;
 using Domain.Model.Interfaces.Services;
+using Microsoft.Extensions.Configuration;
+using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Text;
 using System.Threading.Tasks;
 
 namespace Domain.Services.Services
@@ -12,13 +16,16 @@ namespace Domain.Services.Services
     {
         private readonly IJogoRepository _repository;
         private readonly IBlobService _blobService;
+        private readonly IQueueService _queueService;
 
-        public JogoService(IJogoRepository repository, IBlobService blobService)
+        public JogoService(IJogoRepository repository, IBlobService blobService, IQueueService queueService)
         {
             _repository = repository;
             _blobService = blobService;
+            _queueService = queueService;
         }
 
+        
         public async Task DeleteAsync(Jogo jogo)
         {
             await _blobService.DeleteAsync(jogo.ImageUri);
@@ -33,12 +40,21 @@ namespace Domain.Services.Services
 
         public async Task<Jogo> GetByIdAsync(int id)
         {
-            return await _repository.GetByIdAsync(id);
+             var jogo =  await _repository.GetByIdAsync(id);
+             var jsonJogo = JsonConvert.SerializeObject(jogo);
+             var bytesJsonJogo = UTF8Encoding.UTF8.GetBytes(jsonJogo);
+             string jsonJogoBase64 = Convert.ToBase64String(bytesJsonJogo);
+
+            //await _queueService.SendAsync(jsonJogoBase64);
+
+            return jogo;
+
         }
 
         public async Task InsertAsync(Jogo jogo, Stream stream)
         {
             var newUri = await _blobService.UploadAsync(stream);
+           
             jogo.ImageUri = newUri;
 
             await _repository.InsertAsync(jogo);
@@ -52,6 +68,8 @@ namespace Domain.Services.Services
 
                 var newUri = await _blobService.UploadAsync(stream);
                 jogo.ImageUri = newUri;
+
+
             }
 
             await _repository.UpdateAsync(jogo);

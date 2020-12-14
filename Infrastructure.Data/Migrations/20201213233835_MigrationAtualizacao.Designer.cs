@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Infrastructure.Data.Migrations
 {
     [DbContext(typeof(AzureContext))]
-    [Migration("20201213095715_MigrationInitial")]
-    partial class MigrationInitial
+    [Migration("20201213233835_MigrationAtualizacao")]
+    partial class MigrationAtualizacao
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -28,9 +28,6 @@ namespace Infrastructure.Data.Migrations
                         .HasColumnType("int")
                         .UseIdentityColumn();
 
-                    b.Property<DateTime>("UltimaVisualizacao")
-                        .HasColumnType("datetime2");
-
                     b.Property<string>("ImageUri")
                         .HasColumnType("nvarchar(max)");
 
@@ -39,6 +36,9 @@ namespace Infrastructure.Data.Migrations
 
                     b.Property<bool>("Online")
                         .HasColumnType("bit");
+
+                    b.Property<DateTime?>("UltimaVisualizacao")
+                        .HasColumnType("datetime2");
 
                     b.HasKey("Id");
 

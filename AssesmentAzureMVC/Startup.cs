@@ -12,6 +12,7 @@ using Microsoft.EntityFrameworkCore;
 using Infrastructure.IoC;
 using Domain.Model.Interfaces.Infrastructure;
 using Infrastructure.Services.Blob;
+using Infrastructure.Services.Queue;
 
 namespace AssesmentAzureMVC
 {
@@ -34,6 +35,8 @@ namespace AssesmentAzureMVC
 
             services.AddScoped<IBlobService, BlobService>(provider =>
            new BlobService(Configuration.GetValue<string>("StorageAccount")));
+
+
 
             //services.AddScoped<IBlobService, BlobService>(provider =>
             //new BlobService(configuration.GetValue<string>("StorageAccount")));
@@ -64,7 +67,7 @@ namespace AssesmentAzureMVC
             {
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller=Home}/{action=Index}/{id?}");
+                    pattern: "{controller=Jogo}/{action=Index}/{id?}");
             });
         }
     }
