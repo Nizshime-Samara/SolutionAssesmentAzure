@@ -5,4 +5,4 @@
 <p align="justify"> Sendo assim a conta de estudante foi desabilitada pela plataforma tendo que ser recriado o projeto em nuvem e por tanto o endereço de url antigo : https://projeto-de-bloco.azurewebsites.net , não poderá ser mais encontrado.</p>
 <p align="justify"> Feito os devidos ajustes, segue o novo endereço para correção do professor e monitor tanto para disciplina de Projeto de Bloco quanto de Azure:  https://projeto-de-bloco.azurewebsites.net  (segue o mesmo endereço pois o AppService recebeu o mesmo nome) .</p>
 <h4 align="justify"> Segue algumas considerações para o uso da aplicação afim de avaliação: <h4>
-<p align="justify"> # O banco de dados está configurado com capacidade máxima para 1GB .</p>
+<p align="justify"> ❕ :grey_exclamation: O banco de dados está configurado com capacidade máxima para 1GB .</p>
