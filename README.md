@@ -1,5 +1,5 @@
 # SolutionAssesmentAzure
-<h1 align="center"> Ajuste de Endereço de Aplicação Azure :zap: </h1>
+<h1 align="center"> Aplicação Azure :zap: </h1>
 :point_right: Descrição do Projeto
 <p align="justify"> O projeto consiste em uma aplicação web que simula um álbum público de fotos compartilhável entre os usuários.</p>
 <p align="justify"> O projeto utilizou tecnologias como: .Net5, serviços de Blob's, functions no Azure e banco de dados Azure SQL .</p>
